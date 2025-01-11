@@ -1,3 +1,11 @@
+# Deployment
+npm run deploy
+
+# Notes
+The static react app + github pages application is setup using the following tutorial: https://github.com/gitname/react-gh-pages
+
+Note, the following is create-react-app README.md documentation
+---------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
