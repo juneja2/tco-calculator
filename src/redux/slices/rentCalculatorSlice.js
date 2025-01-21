@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  rent: 0
+  rent: 0,
+  electricity: 0
 };
 
 export const rentCalculatorSlice = createSlice({
@@ -17,9 +18,12 @@ export const rentCalculatorSlice = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.rent = action.payload;
+    },
+    setElectricity: (state, action) => {
+      state.electricity = action.payload;
     }
   }
 });
 
-export const { resetRentCalculatorState, setRent } = rentCalculatorSlice.actions;
+export const { resetRentCalculatorState, setRent, setElectricity } = rentCalculatorSlice.actions;
 export default rentCalculatorSlice.reducer;
