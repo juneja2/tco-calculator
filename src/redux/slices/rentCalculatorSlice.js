@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   rent: 0,
-  electricity: 0
+  electricity: 0,
+  gas: 0
 };
 
 export const rentCalculatorSlice = createSlice({
@@ -21,9 +22,12 @@ export const rentCalculatorSlice = createSlice({
     },
     setElectricity: (state, action) => {
       state.electricity = action.payload;
+    },
+    setGas: (state, action) => {
+      state.gas = action.payload;
     }
   }
 });
 
-export const { resetRentCalculatorState, setRent, setElectricity } = rentCalculatorSlice.actions;
+export const { resetRentCalculatorState, setRent, setElectricity, setGas } = rentCalculatorSlice.actions;
 export default rentCalculatorSlice.reducer;
