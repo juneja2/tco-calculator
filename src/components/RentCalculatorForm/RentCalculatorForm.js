@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setRent, setPetRent, setWater, setElectricity, setGas, setInternet, setTrash, setSewer } from '../../redux/slices/rentCalculatorSlice';
+import { setRent, setPetRent, setWater, setElectricity, setGas, setInternet, setTrash, setSewer, setPestControl } from '../../redux/slices/rentCalculatorSlice';
 import DecimalInput from '../DecimalInput/DecimalInput';
 import EstimatedCost from '../EstimatedCost/EstimatedCost';
 
@@ -15,6 +15,7 @@ function RentCalculatorForm() {
   const internet = useSelector((state) => state.rentCalculator.internet);
   const trash = useSelector((state) => state.rentCalculator.trash);
   const sewer = useSelector((state) => state.rentCalculator.sewer);
+  const pestControl = useSelector((state) => state.rentCalculator.pestControl);
 
   const dispatch = useDispatch();
 
@@ -26,6 +27,7 @@ function RentCalculatorForm() {
   const onInternetChange = (value) => dispatch(setInternet(value));
   const onTrashChange = (value) => dispatch(setTrash(value));
   const onSewerChange = (value) => dispatch(setSewer(value));
+  const onPestControlChange = (value) => dispatch(setPestControl(value));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,6 +45,7 @@ function RentCalculatorForm() {
       <DecimalInput name="Internet" value={internet} onChange={onInternetChange} placeholder={80.32} />
       <DecimalInput name="Trash" value={trash} onChange={onTrashChange} placeholder={50.92} />
       <DecimalInput name="Sewer" value={sewer} onChange={onSewerChange} placeholder={20.46} />
+      <DecimalInput name="Pest Control" value={pestControl} onChange={onPestControlChange} placeholder={20.12} />
       {!showEstimatedCost && <button type="Submit">Submit</button>}
       {showEstimatedCost && <EstimatedCost />}
     </form>

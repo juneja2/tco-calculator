@@ -8,7 +8,8 @@ const initialState = {
   gas: 0,
   internet: 0,
   trash: 0,
-  sewer: 0
+  sewer: 0,
+  pestControl: 0
 };
 
 export const rentCalculatorSlice = createSlice({
@@ -45,6 +46,9 @@ export const rentCalculatorSlice = createSlice({
     },
     setSewer: (state, action) => {
       state.sewer = action.payload;
+    },
+    setPestControl: (state, action) => {
+      state.pestControl = action.payload;
     }
   }
 });
@@ -58,7 +62,8 @@ export const {
   setGas,
   setInternet,
   setTrash,
-  setSewer
+  setSewer,
+  setPestControl
 } = rentCalculatorSlice.actions;
 
 export default rentCalculatorSlice.reducer;
