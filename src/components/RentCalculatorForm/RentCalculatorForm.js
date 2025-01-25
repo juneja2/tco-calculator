@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setRent, setWater, setElectricity, setGas, setInternet, setTrash, setSewer } from '../../redux/slices/rentCalculatorSlice';
+import { setRent, setPetRent, setWater, setElectricity, setGas, setInternet, setTrash, setSewer } from '../../redux/slices/rentCalculatorSlice';
 import DecimalInput from '../DecimalInput/DecimalInput';
 import EstimatedCost from '../EstimatedCost/EstimatedCost';
 
@@ -8,6 +8,7 @@ function RentCalculatorForm() {
   const [showEstimatedCost, setShowEstimatedCost] = useState(false);
 
   const rent = useSelector((state) => state.rentCalculator.rent);
+  const petRent = useSelector((state) => state.rentCalculator.petRent);
   const water = useSelector((state) => state.rentCalculator.water);
   const electricity = useSelector((state) => state.rentCalculator.electricity);
   const gas = useSelector((state) => state.rentCalculator.gas);
@@ -18,6 +19,7 @@ function RentCalculatorForm() {
   const dispatch = useDispatch();
 
   const onRentChange = (value) => dispatch(setRent(value));
+  const onPetRentChange = (value) => dispatch(setPetRent(value));
   const onWaterChange = (value) => dispatch(setWater(value));
   const onElectricityChange = (value) => dispatch(setElectricity(value));
   const onGasChange = (value) => dispatch(setGas(value));
@@ -34,6 +36,7 @@ function RentCalculatorForm() {
   return (
     <form onSubmit={handleSubmit}>
       <DecimalInput name="Rent" value={rent} onChange={onRentChange} placeholder={1591.21} />
+      <DecimalInput name="Pet Rent" value={petRent} onChange={onPetRentChange} placeholder={50.37} />
       <DecimalInput name="Water" value={water} onChange={onWaterChange} placeholder={31.21} />
       <DecimalInput name="Electricity" value={electricity} onChange={onElectricityChange} placeholder={100.57} />
       <DecimalInput name="Gas" value={gas} onChange={onGasChange} placeholder={50.62} />

@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   rent: 0,
+  petRent: 0,
   water: 0,
   electricity: 0,
   gas: 0,
@@ -23,6 +24,9 @@ export const rentCalculatorSlice = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.rent = action.payload;
+    },
+    setPetRent: (state, action) => {
+      state.petRent = action.payload;
     },
     setWater: (state, action) => {
       state.water = action.payload;
@@ -48,6 +52,7 @@ export const rentCalculatorSlice = createSlice({
 export const {
   resetRentCalculatorState,
   setRent,
+  setPetRent,
   setWater,
   setElectricity,
   setGas,
