@@ -7,8 +7,9 @@ function EstimatedCost() {
   const gas = parseFloat(useSelector((state) => state.rentCalculator.gas));
   const internet = parseFloat(useSelector((state) => state.rentCalculator.internet));
   const trash = parseFloat(useSelector((state) => state.rentCalculator.trash));
+  const sewer = parseFloat(useSelector((state) => state.rentCalculator.sewer));
 
-  const estimatedCost = rent + water + electricity + gas + internet + trash;
+  const estimatedCost = rent + water + electricity + gas + internet + trash + sewer;
 
   return (
     <div>Estimated Cost = {estimatedCost}</div>
