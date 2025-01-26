@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { setErrorMessage, resetErrorMessage } from '../../redux/slices/errorSlice';
+import './DecimalInput.css';
 
 function DecimalInput(props) {
   const dispatch = useDispatch();
@@ -19,11 +20,9 @@ function DecimalInput(props) {
   }
 
   return (
-    <div>
-      <span>{props.name}</span>
-      <span>
-        <input type="text" value={props.value} onChange={handleChange} placeholder={props.placeholder}></input>
-      </span>
+    <div className="decimal-input-container">
+      <label className="decimal-input-label"><strong>{props.name}</strong></label>
+      <input className="decimal-input" type="text" value={props.value} onChange={handleChange} placeholder={props.placeholder} />
     </div>
   )
 }

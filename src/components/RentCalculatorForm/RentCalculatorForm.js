@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setRent, setPetRent, setWater, setElectricity, setGas, setInternet, setTrash, setSewer, setPestControl } from '../../redux/slices/rentCalculatorSlice';
 import DecimalInput from '../DecimalInput/DecimalInput';
 import EstimatedCost from '../EstimatedCost/EstimatedCost';
+import "./RentCalculatorForm.css";
 
 function RentCalculatorForm() {
   const [showEstimatedCost, setShowEstimatedCost] = useState(false);
@@ -36,7 +37,7 @@ function RentCalculatorForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="rent-calculator-form-container" onSubmit={handleSubmit} >
       <DecimalInput name="Rent" value={rent} onChange={onRentChange} placeholder={1591.21} />
       <DecimalInput name="Pet Rent" value={petRent} onChange={onPetRentChange} placeholder={50.37} />
       <DecimalInput name="Water" value={water} onChange={onWaterChange} placeholder={31.21} />
@@ -46,7 +47,7 @@ function RentCalculatorForm() {
       <DecimalInput name="Trash" value={trash} onChange={onTrashChange} placeholder={50.92} />
       <DecimalInput name="Sewer" value={sewer} onChange={onSewerChange} placeholder={20.46} />
       <DecimalInput name="Pest Control" value={pestControl} onChange={onPestControlChange} placeholder={20.12} />
-      {!showEstimatedCost && <button type="Submit">Submit</button>}
+      {!showEstimatedCost && <button className="rent-calculator-submit-button" type="Submit">Submit</button>}
       {showEstimatedCost && <EstimatedCost />}
     </form>
    ) 

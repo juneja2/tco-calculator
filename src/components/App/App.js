@@ -5,7 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header>Rent calculator</header>
+      <h1>Rent calculator</h1>
+      <hr className="hr-margin-bottom" />
       <ErrorMessage />
       <RentCalculatorForm />
     </div>

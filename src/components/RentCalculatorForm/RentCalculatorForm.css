@@ -1,0 +1,13 @@
+.rent-calculator-form-container {
+  display: flex;
+  flex-direction: column;   /* Displays form items in rows */
+  justify-content: center;  /* Centers the form horizontally */
+  align-items: center;      /* Centers the form vertically */
+  height: 100%;             /* Takes full height of the screen */
+  gap: 5px;
+}
+
+.rent-calculator-submit-button {
+  margin-top: 15px;
+  font-size: 24px;
+}
