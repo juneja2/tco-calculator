@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import "./EstimatedCost.css";
 
 function EstimatedCost() {
   const rent = parseFloat(useSelector((state) => state.rentCalculator.rent));
@@ -14,7 +15,7 @@ function EstimatedCost() {
   const estimatedCost = rent + petRent + water + electricity + gas + internet + trash + sewer + pestControl;
 
   return (
-    <div>Estimated Cost = {estimatedCost}</div>
+    <div className="estimated-cost"><strong>Estimated Cost = {estimatedCost}</strong></div>
   );
 }
 
