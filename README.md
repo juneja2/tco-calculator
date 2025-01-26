@@ -1,3 +1,19 @@
+# Background
+Renting an place is becoming increasingly expensive especially in the bay area. It's best to shop around until you find a few apartments that suits your needs. However, how does one go about comparing 2 or more apartments without knowing about all the expenses involved?
+
+Usually, a renter needs to apply & pay a holding deposit (non-refundable in some cases) to get the lease in order to know all the expenses they'll incur.
+
+# Goal
+Empower renters to make the best choice of apartments given their needs & budget.
+
+# Solution
+Build an advanced rent calculator to estimate the total cost of renting. A renter can use this calculator to ask educated questions to the leasing agent or property manager to get estimate numbers for different categories of expenses.
+
+Total cost of renting provides a tangible way to compare apartments.
+
+# Limitation of this solution
+This solution doesn't take into account the intangibles: how new is the apartment, what amenties come with the apartment, etc.
+
 # Deployment
 npm run deploy
 
