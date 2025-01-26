@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tco-calculator/static/css/main.f855e6bc.css",
-    "main.js": "/tco-calculator/static/js/main.c182cd00.js",
+    "main.css": "/tco-calculator/static/css/main.8198f1ee.css",
+    "main.js": "/tco-calculator/static/js/main.42324183.js",
     "static/js/488.4590b0e1.chunk.js": "/tco-calculator/static/js/488.4590b0e1.chunk.js",
     "index.html": "/tco-calculator/index.html",
-    "main.f855e6bc.css.map": "/tco-calculator/static/css/main.f855e6bc.css.map",
-    "main.c182cd00.js.map": "/tco-calculator/static/js/main.c182cd00.js.map",
+    "main.8198f1ee.css.map": "/tco-calculator/static/css/main.8198f1ee.css.map",
+    "main.42324183.js.map": "/tco-calculator/static/js/main.42324183.js.map",
     "488.4590b0e1.chunk.js.map": "/tco-calculator/static/js/488.4590b0e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.c182cd00.js"
+    "static/css/main.8198f1ee.css",
+    "static/js/main.42324183.js"
   ]
 }
